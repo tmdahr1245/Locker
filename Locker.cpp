@@ -29,7 +29,7 @@ int APIENTRY wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PWSTR pCmdLi
 	Register();
 	WndClass.cbClsExtra = 0;
 	WndClass.cbWndExtra = 0;
-	WndClass.hbrBackground = (HBRUSH)GetStockObject(BLACK_BRUSH);
+	WndClass.hbrBackground = (HBRUSH)GetStockObject(HOLLOW_BRUSH);
 	WndClass.hCursor = LoadCursor(NULL, IDC_ARROW);
 	WndClass.hIcon = (HICON)LoadImage(NULL, TEXT("Icon.ico"), IMAGE_ICON, 0, 0, LR_LOADFROMFILE | LR_DEFAULTSIZE | LR_SHARED);
 	WndClass.hInstance = hInstance;
