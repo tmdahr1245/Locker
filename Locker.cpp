@@ -95,6 +95,10 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT iMessage, WPARAM wParam, LPARAM lParam)
 				Registry(0);
 				exit(1);
 			}
+			else{
+				SetWindowText(hEdit,TEXT(""));
+				SetFocus(hEdit);
+			}
 			return 0;
 		}
 		return 0;
